@@ -1,6 +1,6 @@
 
 import Header from "../components/Header";
-import DashboardCardsPlaceholder from "../components/DashboardCardsPlaceholder";
+import DashboardCards from "../components/DashboardCards";
 import IndicacaoFluxoPlaceholder from "../components/IndicacaoFluxoPlaceholder";
 import PrimaryCTAsPlaceholder from "../components/PrimaryCTAsPlaceholder";
 import AjudaLinksPlaceholder from "../components/AjudaLinksPlaceholder";
@@ -12,7 +12,7 @@ const Index = () => {
       <Header />
       <main className="w-full flex flex-col items-center pt-[72px] pb-12 px-3 max-w-3xl mx-auto md:pt-[86px] md:px-0">
         {/* Dashboard de Performance (Bloco 1) */}
-        <DashboardCardsPlaceholder />
+        <DashboardCards />
         {/* Fluxo de Indicação Simplificado (Bloco 2) */}
         <IndicacaoFluxoPlaceholder />
         {/* CTAs Principais (Bloco 3) */}
