@@ -12,15 +12,15 @@ const steps = [
     icon: <Share2 className="text-blue-500" />,
   },
   {
-    label: "Aluno se inscreve",
+    label: "Aluno faz inscrição",
     icon: <User className="text-purple-500" />,
   },
   {
-    label: "Indicação confirmada",
+    label: "Indicação validada",
     icon: <Check className="text-green-500" />,
   },
   {
-    label: "Você recebe recompensa!",
+    label: "Receba sua recompensa",
     icon: <DollarSign className="text-yellow-500" />,
   },
 ];

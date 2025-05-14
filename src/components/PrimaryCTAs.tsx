@@ -21,12 +21,36 @@ export default function PrimaryCTAs() {
       duration: 2500,
     });
     setTimeout(() => setCopied(false), 2500);
+
+    // Adicionar um toast com link para simulação
+    setTimeout(() => {
+      toast({
+        title: "Testar o fluxo de indicação",
+        description: (
+          <div className="cursor-pointer text-blue-600 hover:underline" onClick={() => navigate("/simulate-referral")}>
+            Clique aqui para simular uma indicação
+          </div>
+        ),
+        duration: 5000,
+      });
+    }, 1000);
   }
 
   function handleHistoricalClick(e: React.MouseEvent) {
     e.preventDefault();
-    // Placeholder: Navegar para rota de histórico de ganhos (a página será criada futuramente)
-    navigate("/historico");
+    // Redirecionando para a página de histórico de ganhos
+    navigate("/history");
+  }
+
+  function handleOffersClick(e: React.MouseEvent) {
+    e.preventDefault();
+    navigate("/offers");
+  }
+
+  function handleMaterialsClick(e: React.MouseEvent) {
+    e.preventDefault();
+    // Redirecionando para a página de ajuda por enquanto
+    navigate("/help");
   }
 
   return (
@@ -41,17 +65,24 @@ export default function PrimaryCTAs() {
       <Button
         variant="secondary"
         className="w-full md:w-auto text-base font-semibold px-6 py-3 shadow"
-        // Futuramente: abrirá seleção/materials de divulgação
+        onClick={handleMaterialsClick}
       >
         Acesse materiais de divulgação
       </Button>
-      <div className="w-full md:w-auto flex items-center justify-center">
+      <div className="w-full md:w-auto flex items-center justify-center gap-4">
         <button
-          className="block mt-2 text-gray-500 hover:underline text-sm mx-auto"
+          className="block mt-2 text-gray-500 hover:underline text-sm"
           type="button"
           onClick={handleHistoricalClick}
         >
           Veja seu histórico de ganhos
+        </button>
+        <button
+          className="block mt-2 text-blue-600 hover:underline text-sm font-medium"
+          type="button"
+          onClick={handleOffersClick}
+        >
+          Ver ofertas disponíveis
         </button>
       </div>
     </section>
