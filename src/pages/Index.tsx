@@ -6,11 +6,19 @@ import PrimaryCTAs from "../components/PrimaryCTAs";
 import AjudaLinksPlaceholder from "../components/AjudaLinksPlaceholder";
 import FloatingHelpButton from "../components/FloatingHelpButton";
 
-// Demais props (logo, frase, cores) poderiam ser buscadas de um contexto/config futura
+/**
+ * O usuário afiliado logado deverá ser identificado via autenticação (ex: Supabase Auth) 
+ * e suas informações (link, dados do dashboard, etc.) alimentadas dinamicamente.
+ * Por ora, valores e frase motivacional são placeholders.
+ */
 const fraseMotivacional =
-  "Você está a 1 aluno da próxima recompensa!"; // Deixe customizável por prop futuramente
+  "Você está a 1 aluno da próxima recompensa!"; // Dinamizar para associação à IE via backend futuramente
 
 const Index = () => {
+  // Futuro: hook para pegar dados do usuário autenticado (ex: via Supabase)
+  // const { user } = useAuthSupabase();
+
+  // Futuro: passar dados dinâmicos para DashboardCards e PrimaryCTAs via props/context
   return (
     <div className="relative min-h-screen w-full">
       <Header fraseMotivacional={fraseMotivacional} />
