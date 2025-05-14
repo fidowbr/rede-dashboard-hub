@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Header from "../components/Header";
+import DashboardCardsPlaceholder from "../components/DashboardCardsPlaceholder";
+import IndicacaoFluxoPlaceholder from "../components/IndicacaoFluxoPlaceholder";
+import PrimaryCTAsPlaceholder from "../components/PrimaryCTAsPlaceholder";
+import AjudaLinksPlaceholder from "../components/AjudaLinksPlaceholder";
+import FloatingHelpButton from "../components/FloatingHelpButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen w-full">
+      <Header />
+      <main className="w-full flex flex-col items-center pt-[72px] pb-12 px-3 max-w-3xl mx-auto md:pt-[86px] md:px-0">
+        {/* Dashboard de Performance (Bloco 1) */}
+        <DashboardCardsPlaceholder />
+        {/* Fluxo de Indicação Simplificado (Bloco 2) */}
+        <IndicacaoFluxoPlaceholder />
+        {/* CTAs Principais (Bloco 3) */}
+        <PrimaryCTAsPlaceholder />
+        {/* Ajuda/Informações (Bloco 4) */}
+        <AjudaLinksPlaceholder />
+      </main>
+      <FloatingHelpButton />
     </div>
   );
 };
