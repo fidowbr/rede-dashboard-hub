@@ -1,8 +1,8 @@
 
 import Header from "../components/Header";
 import DashboardCards from "../components/DashboardCards";
-import IndicacaoFluxoPlaceholder from "../components/IndicacaoFluxoPlaceholder";
-import PrimaryCTAsPlaceholder from "../components/PrimaryCTAsPlaceholder";
+import IndicacaoFluxo from "../components/IndicacaoFluxo";
+import PrimaryCTAs from "../components/PrimaryCTAs";
 import AjudaLinksPlaceholder from "../components/AjudaLinksPlaceholder";
 import FloatingHelpButton from "../components/FloatingHelpButton";
 
@@ -14,9 +14,9 @@ const Index = () => {
         {/* Dashboard de Performance (Bloco 1) */}
         <DashboardCards />
         {/* Fluxo de Indicação Simplificado (Bloco 2) */}
-        <IndicacaoFluxoPlaceholder />
+        <IndicacaoFluxo />
         {/* CTAs Principais (Bloco 3) */}
-        <PrimaryCTAsPlaceholder />
+        <PrimaryCTAs />
         {/* Ajuda/Informações (Bloco 4) */}
         <AjudaLinksPlaceholder />
       </main>
