@@ -3,13 +3,17 @@ import React from "react";
 
 interface LogoIEProps {
   size?: number;
+  src?: string; // Adicionado para personalização futura
 }
 
-const LogoIE: React.FC<LogoIEProps> = ({ size = 40 }) => (
+const LogoIE: React.FC<LogoIEProps> = ({ size = 40, src }) => (
   <div className="flex items-center justify-center">
-    {/* Placeholder logo image */}
+    {/* Container facilmente customizável: basta mudar a prop 'src' */}
     <img
-      src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=80&h=80&fit=crop"
+      src={
+        src ||
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=80&h=80&fit=crop"
+      }
       alt="Logo da IE"
       width={size}
       height={size}
